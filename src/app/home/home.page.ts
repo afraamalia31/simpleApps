@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  info: any = {};
 
-  constructor() {}
+  saveData() {
+    console.log(this.info);
+    }
+
+    scorePage() {
+      this.route.navigate(['/score']);
+     }
+
+    
+  constructor(private route: Router) {}
 
 }
